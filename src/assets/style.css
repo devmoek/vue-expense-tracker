@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
-
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+/* font: 35px, 15px, 18px*/
 :root {
   --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  --border-radius: 10px;
 }
 
 * {
@@ -9,14 +10,14 @@
 }
 
 body {
-  background-color: #f7f7f7;
+  background-color: #181818;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
   margin: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 18px;
 }
 
@@ -25,29 +26,47 @@ body {
   width: 400px;
 }
 
+h1,
+h2,
+h3,
+h4,
+label,
+span,
+small,
+strong {
+  color: #fff;
+}
+
+strong {
+  font-size: 35px;
+}
+
 h1 {
   letter-spacing: 1px;
   margin: 0;
+  color: #fff;
 }
 
 h3 {
   border-bottom: 1px solid #bbb;
   padding-bottom: 10px;
   margin: 40px 0 10px;
+  font-size: 18px;
 }
 
 h4 {
   margin: 0;
   text-transform: uppercase;
+  font-size: 15px;
 }
 
 .inc-exp-container {
   background-color: #fff;
-  box-shadow: var(--box-shadow);
   padding: 20px;
   display: flex;
   justify-content: space-between;
   margin: 20px 0;
+  border-radius: var(--border-radius);
 }
 
 .inc-exp-container > div {
@@ -76,16 +95,18 @@ h4 {
 label {
   display: inline-block;
   margin: 10px 0;
+  font-size: 16px;
 }
 
-input[type='text'],
-input[type='number'] {
+input[type="text"],
+input[type="number"] {
   border: 1px solid #dedede;
   border-radius: 2px;
   display: block;
   font-size: 16px;
   padding: 10px;
   width: 100%;
+  border-radius: var(--border-radius);
 }
 
 .btn {
@@ -95,10 +116,15 @@ input[type='number'] {
   color: #fff;
   border: 0;
   display: block;
-  font-size: 16px;
+  font-size: 18px;
   margin: 10px 0 30px;
   padding: 10px;
   width: 100%;
+  border-radius: var(--border-radius);
+}
+
+.btn:hover {
+  background-color: #6e55ed;
 }
 
 .btn:focus,
@@ -114,13 +140,14 @@ input[type='number'] {
 
 .list li {
   background-color: #fff;
-  box-shadow: var(--box-shadow);
   color: #333;
   display: flex;
   justify-content: space-between;
   position: relative;
   padding: 10px;
   margin: 10px 0;
+  border-radius: var(--border-radius);
+  font-size: 16px;
 }
 
 .list li.plus {
