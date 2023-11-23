@@ -12,7 +12,6 @@
 </template>
 
 <script setup>
-import { defineProps } from "vue";
 
 const props = defineProps({
     income: {
@@ -25,3 +24,9 @@ const props = defineProps({
     },
 });
 </script>
+
+<style scoped>
+h4 {
+  color: #000;
+}
+</style>

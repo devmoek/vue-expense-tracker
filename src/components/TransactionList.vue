@@ -9,11 +9,13 @@
       {{ transaction.text }} <span>${{ transaction.amount }}</span>
       <button @click="deleteTransaction(transaction.id)" class="delete-btn">x</button>
     </li>
+    <li v-if="transactions.length === 0" class="no-transactions">
+      No transactions yet
+    </li>
   </ul>
 </template>
 
 <script setup>
-import { defineProps } from "vue";
 const emit = defineEmits(["transactionDeleted"]);
 const props = defineProps({
   transactions: {
@@ -26,3 +28,11 @@ const deleteTransaction = (id) => {
   emit("transactionDeleted", id);
 }
 </script>
+
+<style>
+.no-transactions {
+  text-align: center;
+  padding: 1rem;
+  color: #555;
+}
+</style>
