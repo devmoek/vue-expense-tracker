@@ -127,11 +127,6 @@ input[type="number"] {
   background-color: #6e55ed;
 }
 
-.btn:focus,
-.delete-btn:focus {
-  outline: 0;
-}
-
 .list {
   list-style-type: none;
   padding: 0;
