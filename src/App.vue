@@ -36,29 +36,21 @@ onMounted(() => {
 
 // Get total
 const total = computed(() => {
-  return transactions.value.reduce((acc, transaction) => {
-    return acc + transaction.amount;
-  }, 0);
+  return transactions.value.reduce((acc, transaction) => acc + transaction.amount, 0);
 });
 
 // Get income
 const income = computed(() => {
-  return transactions.value
-    .filter((transaction) => transaction.amount > 0)
-    .reduce((acc, transaction) => {
-      return acc + transaction.amount;
-    }, 0)
-    .toFixed(2);
+  return transactions.value.reduce((acc, transaction) => {
+    return transaction.amount > 0 ? acc + transaction.amount : acc;
+  }, 0).toFixed(2);
 });
 
 // Get expenses
 const expenses = computed(() => {
-  return transactions.value
-    .filter((transaction) => transaction.amount < 0)
-    .reduce((acc, transaction) => {
-      return acc + transaction.amount;
-    }, 0)
-    .toFixed(2);
+  return transactions.value.reduce((acc, transaction) => {
+    return transaction.amount < 0 ? acc + transaction.amount : acc;
+  }, 0).toFixed(2);
 });
 
 // Add transaction
@@ -67,6 +59,7 @@ const handleTransactionSubmitted = (transactionData) => {
     id: generateUniqueId(),
     text: transactionData.text,
     amount: transactionData.amount,
+    date: new Date(),
   });
 
   saveTransactionsToLocalStorage();
