@@ -1,14 +1,12 @@
-# vue-expense-tracker
+# Vue Expense TRacker
+A Vue.js-based web application designed for tracking and managing financial transactions, featuring functionalities like adding, listing, calculating totals, and persisting transactions in local storage, enhanced with user feedback through toast notifications.
 
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+## Components
+* **Header**: Displays the header of the application.
+* **Balance**: Shows the total balance, calculated from all transactions.
+* **IncomeExpenses**: Displays the total income and expenses separately.
+* **TransactionList**: Lists all transactions and allows for the deletion of individual transactions.
+* **AddTransaction**: Provides a form to add new transactions.
 
 ## Project Setup
 
